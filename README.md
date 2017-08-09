@@ -24,7 +24,7 @@ $> docker images
 $> docker run -p 4000:80 friendlyhello
 ```
 
-=> on the ``Dockerfile` the "`EXPOSE`" port is 80 but port 80 has been mapped to port 4000 ("published" port)
+=> on the `Dockerfile` the "`EXPOSE`" port is 80 but port 80 has been mapped to port 4000 ("published" port)
 
 - Check out the result page on http://localhost:4000
 
