@@ -178,5 +178,21 @@ $> docker-machine ssh myvm1 "docker swarm leave --force"
 $> docker-machine stop $(docker-machine ls -q)
 ```
 
+## 10°) Build a "stack": a group of interrelated services that share dependencies
 
+- Add visualizer, a standalone service, to the `docker-compose` file
 
+Check out http://192.168.99.100:8080/ (The visualizer is a standalone service that can run in any app that includes it in the stack.)
+
+- Add a Redis database for storing app data
+
+N.B. To persist the data:
+
+ - *redis has to run on the manager, so it’s always using the same filesystem.*
+ - *redis accesses an arbitrary directory in the host’s file system as /data inside the container, which is where Redis stores data*:
+
+```
+$> docker-machine ssh myvm1 "mkdir ./data"
+```
+
+Repeat the operations above and check out the number of visits :)
