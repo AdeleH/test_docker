@@ -64,7 +64,10 @@ $> docker login
 $> docker push adeleh/get-started:part1
 ```
 
+Image pushed on: https://hub.docker.com/r/adeleh/get-started/
+
 => Check out your account settings to update the default visibility of your repo.
+
 
 ## Pull and run the image from your remote repo
 
